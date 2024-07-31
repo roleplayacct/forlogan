@@ -1,0 +1,720 @@
+<!--about me-->
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face{ font-family:"theone"; src: url('https://dl.dropboxusercontent.com/s/qgthd1vi2u0j636/adelia.ttf’)'); }
+
+:root{
+  --darkGray:#0e0e0e;
+  --darkBlack:#060606;
+  --textColor:#909090;
+  --brightWhite:#fff;
+}
+
+body {
+  background-color:var(--darkBlack);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  margin: 0;
+  overflow:auto;
+  background-size:cover;
+}
+
+table, tr, td, li, p, div, .profileInfo td.text {
+    font-size: 10px;
+    color: var(--textColor);
+    font-family: 'Montserrat', sans-serif;}
+
+
+.container {
+    width: 750px;
+    height: 457px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom:0;
+    overflow: hidden;
+    margin: auto;
+    background-color: var(--darkGray);
+    font-family: 'Abel', sans-serif;
+}
+
+.leftSide {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    height: 457px;
+}
+
+.topImageHolder {
+    margin: 20px;
+    padding: 5px;
+    border: 1px solid var(--brightWhite);
+    width: 246px;
+    height: 300px;
+}
+
+.bottomQuoteAndNav {
+    margin: 0px 26px;
+    text-align: justify;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 2px;
+    line-height: 17px;
+    font-size: 8px;
+    margin-top: -1px;
+}
+
+.bottomQuoteAndNav a:link, .bottomQuoteAndNav a:visited, .bottomQuoteAndNav a:active {
+    color: var(--brightWhite);
+    font-size: 8px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0px 1px;
+    letter-spacing: 1px;
+}
+
+.bottomQuoteAndNav a:hover {
+    text-shadow: 1px 1px 6px var(--textColor);
+    color: var(--textColor);
+}
+
+.rightSide {
+    display: inline-block;
+    vertical-align: top;
+    width: 450px;
+    height: 457px;
+    margin-left: -3px;
+    margin-right: -300px;
+}
+
+.leftSideTabs {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+    width: 178px;
+    height: 199px;
+    position: relative;
+    overflow: hidden;
+}
+
+.rightSideTabs {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+    width: 252px;
+    height: 196px;
+    margin-left: -3px;
+    margin-right: -300px;
+    position: relative;
+    overflow: hidden;
+}
+
+label.bottomTabsLabels {
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+    font-size: 7px;
+    background: var(--brightWhite);
+    padding: 6px 6px;
+    font-weight: 500;
+    color: var(--darkBlack);
+    margin-left: 4px;
+    margin-top: 6px;
+    width: 54px;
+}
+
+label.bottomTabsLabels:first-child {
+    margin-left: 0px;
+}
+
+.showBasics, .showOwes, .showNavi, .showBiography, .showSocials, .showLove {
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    height: 0px;
+    overflow: hidden;
+    text-align: justify;
+    line-height: 22px;
+    font-size: 8px;
+}
+
+.showBasics b, .showOwes b, .showNavi b, .showBasics strong, .showOwes strong, .showNavi strong {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--brightWhite);
+}
+
+h1.owesTitle {
+    text-align: right;
+    padding-right: 10px;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: var(--brightWhite);
+}
+
+#showBasics:checked ~ .showBasics, #showOwes:checked ~ .showOwes, #showNavi:checked ~ .showNavi {
+    height: 190px;
+    overflow: auto;
+}
+
+label.bottomTabsLabels:hover {
+    background: var(--darkBlack);
+    color: var(--brightWhite);
+}
+
+#showBiography:checked ~ .showBiography, #showSocials:checked ~ .showSocials, #showLove:checked ~ .showLove {
+    padding: 15px;
+    height: 177px;
+    border-left: 1px solid var(--brightWhite);
+}
+
+.showBiography, .showSocials, .showLove {
+    margin-left: 10px;
+}
+
+a.extraNaviLink:link, a.extraNaviLink:visited, a.extraNaviLink:active {
+    display: block;
+    text-align: center;
+    margin: 12px;
+    border: 1px solid var(--brightWhite);
+    margin-left: 0px;
+    letter-spacing: 1px;
+    color: var(--brightWhite);
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+}
+
+a.extraNaviLink:hover {
+    letter-spacing: 2px;
+    color: var(--darkBlack);
+    background: var(--brightWhite);
+}
+
+.middleTabLabels {
+    text-align: center;
+    margin-right: 20px;
+    margin-top:5px;
+}
+
+.insideRightScroll {
+    height: 170px;
+    overflow: auto;
+    line-height: 27px;
+}
+
+.insideRightScroll b {
+    text-transform: uppercase;
+    color: var(--brightWhite);
+    letter-spacing: 0px;
+    font-size: 9px;
+}
+
+h1.insideRightTitle {
+    text-align: right;
+    margin: 0;
+    font-weight: 100;
+    text-transform: lowercase;
+    font-size: 17px;
+    color: var(--brightWhite);
+    margin-bottom: 10px;
+}
+
+.bottomConnections {
+    border: 1px solid var(--brightWhite);
+    margin-right: 20px;
+    padding: 5px;
+    margin-top: 15px;
+    height: 80px;
+    position: relative;
+    width: 420px;
+}
+
+img.connectionImage {
+    position: absolute;
+}
+
+.actualConnectionsHolder {
+    position: absolute;
+    background: var(--darkGray);
+    border: 10px solid transparent;
+    width: 400px;
+    height: 60px;
+    text-align: justify;
+    overflow: auto;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    opacity: 0;
+    z-index: 9999;
+    line-height: 18px;
+}
+
+.actualConnectionsHolder b {
+    text-transform: uppercase;
+    color: var(--brightWhite);
+    letter-spacing: 1px;
+}
+
+.actualConnectionsHolder i {
+    text-transform: lowercase;
+    font-weight: bold;
+    color: var(--brightWhite);
+}
+
+h2.connectionsTitle {
+    position: absolute;
+    text-align: center;
+    width: 420px;
+    margin: 0px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--brightWhite);
+    padding: 26px 0px;
+}
+
+h2.connectionsTitle span {
+    display: block;
+    color: var(--textColor);
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.bottomConnections:hover .actualConnectionsHolder {
+    opacity: 1;
+}
+
+h2.nameHolder {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-size: 34px;
+    color: var(--brightWhite);
+}
+
+h2.nameHolder span {
+    display: block;
+    font-weight: 100;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+
+.isntaPostIndv {
+    display: inline-block;
+    background-color: #111111;
+    border: 1px solid #707070;
+    text-align: left;
+    margin-top: 20px;
+    width: 199px;
+    margin-left: 10px;
+}
+
+
+.topIconInsta {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+.instaTop{
+    color:#000;
+}
+
+b.instaComments {
+    font-size: 7px;
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 8px;
+    margin-top: -6px;
+    color: var(--brightWhite);
+    font-weight: 300;
+}
+
+.isntaPostIndv:first-child {
+    margin-top: 0px;
+}
+
+.socialMediaScroll {
+    margin-top: -13px;
+    height: 193px;
+    overflow: auto;
+}
+
+
+.instaIcon {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 7px;
+    margin-left: 8px;
+    border: 1px solid #707070;
+    padding: 3px;
+}
+
+
+.instaName {
+    width: 130px;
+    height: 38px;
+    font-family: 'Montserrat';
+    font-size: 11px;
+    letter-spacing: 0px;
+    text-align: left;
+    font-weight: 100;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    line-height: 12px;
+    margin-top: 10px;
+}
+
+.tweetLocation {
+    font-size: 8px;
+    color: var(--brightWhite);
+}
+
+
+.instaBottomBar {
+    margin-left: 5px;
+    padding-right: 5px;
+    text-align: justify;
+    font-size: 9px;
+    padding-top: 5px;
+    font-weight:100;
+    display: block;
+}
+
+
+.instaIndvImg {
+    width: 199px;
+    height: 100px;
+    overflow: hidden;
+    margin-left: 0px;
+}
+
+.instaName b {
+    font-size: 8px;
+    font-weight: 500;
+    float: right;
+    padding-top: 7px;
+}
+
+b.captionName {
+    font-weight: 400;
+}
+
+a:link, a:visited, a:active {
+    font-family: 'Montserrat';
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--brightWhite);
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+input{
+  display:none;
+}
+
+::-webkit-scrollbar {display:none;}
+
+
+a.credit:link, a.credit:visited {
+    background-color: #fff;
+    color: #2d0707;
+    padding: 5px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 9px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    font-size: 11px;
+    text-transform: uppercase;
+    width: 78px;
+    letter-spacing: 2px;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+.creditHolder{
+position:fixed;
+bottom:15px;
+left:15px;
+}
+ 
+a.credit:hover, a.credit:active {
+background-color: #131313;
+}
+
+
+.contacttable, .whitetext12, .nametext, .lightbluetext8, .orangetext15, .blacktext12, .btext, .redtext, .redbtext {display:none;height:0px;!important;visibility:hidden} td td td td {border:0px;width:0px;text-align:left;} table, td, tr {padding:0px;width:;background-color:transparent} table table table {padding:1px;height:.01%;width:100%;} table table,table table table table,table,tr,td {height:0px;!important;border:0px;!important} a.text, table div font a, .navbar font, tr td font {visibility:hidden;display:none;height:0px;!important;} #footerWarpper{display: none;} table table table table,table table table table td.text, td.text td.text table{display:none;} td.text table table{display:inline;visibility:visible;} table td table tr td.text table{visibility:hidden;} table td table tr td.text table table,table td table tr td.text table table td.text{visibility:visible;} table.footer {display: none;} div table a.navbar img {display:none;} div table.navigationBar {margin-bottom:-30px;} .profileInfo {display:none;} .profileInfo td {text-align:left;} .profileInfo a img {position:relative; margin-bottom:-1px; margin-bottom:-2px; width:125px; margin-right:-6px; margin-top:4px; _margin-top:3px; display:block;} .profileInfo td td, .nametext, .msOnlineNow img {display:none;} .profileInfo td td.text {display:table-cell; _display:inline;} .profileInfo .text {font-size:7px; line-height:8px; text-transform:uppercase; font-family:small fonts;} .msOnlineNow {font-family:small fonts; letter-spacing:0px; font-size:7px; line-height:8px; padding:2px; padding-left:0px; text-transform:uppercase; font-weight:normal; display:none; text-decoration:blink; letter-spacing:2px;} .userAlbums {display:none;} div td {display:none;} 
+</style>
+
+
+
+<!--like to meet-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<link href="//solrainha.github.io/honeybee/honeybee.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+
+<html>
+<body>
+  <div class="creditHolder"> <a href="/lilac" class="credit">credit</a> </div>
+  <div class="container">
+    <div class="leftSide">
+      <div class="topImageHolder">
+        <img src="https://i.imgur.com/KCLP8kf.png">
+      </div>
+      <div class="bottomQuoteAndNav">
+        Intelligence is a very valuable thing, innit, my friend? And usually it comes far too fucking late. | | <a href="/home.php">home</a> <a href="/send_message.php?member_id=1889185">Message</a> <a href="/add_comment.php?member_id=1889185">Comment</a> <a href="/status_stream.php?member_id=1889185">Stream</a> <a href="/view_member_blog.php?member_id=1889185">Blog</a> <a href="/albums.php?member_id=1889185">Pictures</a>
+      </div>
+    </div>
+    <div class="rightSide">
+      <h2 class="nameHolder">
+        logan santiago
+        <span>When you're dead already, you're free.</span>
+      </h2>
+      <div class="middleTabLabels">
+        <label for="showBiography" class="bottomTabsLabels" id="">biography</label>
+        <label for="showSocials" class="bottomTabsLabels" id="">social media</label>
+        <label for="showLove" class="bottomTabsLabels" id="">love life</label>
+        <label for="showBasics" class="bottomTabsLabels" id="">the basics</label>
+        <label for="showOwes" class="bottomTabsLabels" id="">owes list</label>
+        <label for="showNavi" class="bottomTabsLabels" id="">navigation</label>
+      </div>
+      <div class="leftSideTabs">
+        <input type="radio" name="leftTabsHolder" id="showBasics" checked>
+        <input type="radio" name="leftTabsHolder" id="showOwes">
+        <input type="radio" name="leftTabsHolder" id="showNavi">
+        <div class="showBasics">
+         <b>Full Name:</b> Logan Santiago<br>
+        <b>Pronunciation:</b> low·gn<br>
+        <b>Nickname(s):</b> daddy, to all my hoes.<br>
+        <b>Meaning:</b> Logan is originally of Gaelic and Scottish descent, from the word "lag," meaning "hollow."<br>
+        <b>Gender:</b> Male<br>
+        <b>Gender Role:</b> Masculine<br>
+        <b>Orientation:</b> Straight<br>
+        <b>Age:</b> Thirty-three<br>
+        <b>Birthday:</b> August 10, 1990<br>
+        <b>Birthplace:</b> Los Angeles, California<br>
+        <b>Zodiac Sign:</b> Leo<br>
+        </div>
+        <div class="showOwes">
+          <h1 class="owesTitle">I owe you</h1>
+          <strong>Name Here</strong> - starter - 00.00 <br>
+<strong>Name Here</strong> - reply - 00.00 <br>
+<strong>Name Here</strong> - starter - 00.00 <br>
+<strong>Name Here</strong> - reply - 00.00 <br>
+          <strong>Name Here</strong> - starter - 00.00 <br>
+<strong>Name Here</strong> - reply - 00.00 <br>
+<strong>Name Here</strong> - starter - 00.00 <br>
+<strong>Name Here</strong> - reply - 00.00 <br>
+          
+          
+          <h1 class="owesTitle">You Owe Me</h1>
+          <strong>Name Here</strong> - starter - 00.00 <br>
+<strong>Name Here</strong> - reply - 00.00 <br>
+<strong>Name Here</strong> - starter - 00.00 <br>
+<strong>Name Here</strong> - reply - 00.00 <br>
+          <strong>Name Here</strong> - starter - 00.00 <br>
+<strong>Name Here</strong> - reply - 00.00 <br>
+<strong>Name Here</strong> - starter - 00.00 <br>
+<strong>Name Here</strong> - reply - 00.00 <br>
+          
+          
+          <h1 class="owesTitle">Updated: 00.00</h1>
+        </div>
+        <div class="showNavi">
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+          <a href="/" class="extraNaviLink">extra navi link</a>
+        </div>
+      </div>
+      <div class="rightSideTabs">
+        <input type="radio" name="rightTabsHolder" id="showBiography" checked>
+        <input type="radio" name="rightTabsHolder" id="showSocials">
+        <input type="radio" name="rightTabsHolder" id="showLove">
+        <div class="showBiography">
+          <div class="insideRightScroll">
+            <h1 class="insideRightTitle">
+              i. where it started
+            </h1>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Faucibus vitae aliquet nec ullamcorper sit. Hac habitasse platea dictumst quisque sagittis. Elementum sagittis vitae et leo duis ut. Massa placerat duis ultricies lacus sed turpis. Purus sit amet luctus venenatis lectus. Feugiat in ante metus dictum at tempor commodo. Vestibulum lectus mauris ultrices eros in cursus. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Non diam phasellus vestibulum lorem.
+   <br><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Faucibus vitae aliquet nec ullamcorper sit. Hac habitasse platea dictumst quisque sagittis. Elementum sagittis vitae et leo duis ut. Massa placerat duis ultricies lacus sed turpis. Purus sit amet luctus venenatis lectus. Feugiat in ante metus dictum at tempor commodo. Vestibulum lectus mauris ultrices eros in cursus. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Non diam phasellus vestibulum lorem.
+            
+            <h1 class="insideRightTitle">
+              ii. title here
+            </h1>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Faucibus vitae aliquet nec ullamcorper sit. Hac habitasse platea dictumst quisque sagittis. Elementum sagittis vitae et leo duis ut. Massa placerat duis ultricies lacus sed turpis. Purus sit amet luctus venenatis lectus. Feugiat in ante metus dictum at tempor commodo. Vestibulum lectus mauris ultrices eros in cursus. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Non diam phasellus vestibulum lorem.
+   <br><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Faucibus vitae aliquet nec ullamcorper sit. Hac habitasse platea dictumst quisque sagittis. Elementum sagittis vitae et leo duis ut. Massa placerat duis ultricies lacus sed turpis. Purus sit amet luctus venenatis lectus. Feugiat in ante metus dictum at tempor commodo. Vestibulum lectus mauris ultrices eros in cursus. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Non diam phasellus vestibulum lorem.
+            
+            
+            <h1 class="insideRightTitle">
+              iii. title here
+            </h1>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Faucibus vitae aliquet nec ullamcorper sit. Hac habitasse platea dictumst quisque sagittis. Elementum sagittis vitae et leo duis ut. Massa placerat duis ultricies lacus sed turpis. Purus sit amet luctus venenatis lectus. Feugiat in ante metus dictum at tempor commodo. Vestibulum lectus mauris ultrices eros in cursus. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Non diam phasellus vestibulum lorem.
+   <br><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing bibendum est. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Faucibus vitae aliquet nec ullamcorper sit. Hac habitasse platea dictumst quisque sagittis. Elementum sagittis vitae et leo duis ut. Massa placerat duis ultricies lacus sed turpis. Purus sit amet luctus venenatis lectus. Feugiat in ante metus dictum at tempor commodo. Vestibulum lectus mauris ultrices eros in cursus. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Non diam phasellus vestibulum lorem.
+   
+   
+   
+          </div>
+        </div>
+        <div class="showSocials">
+          <div class="socialMediaScroll">
+            
+        <div class="isntaPostIndv">
+	<div class="instaTop">
+          <img src="https://i.imgur.com/O6OEKr0.png" class="instaIcon">
+        <div class="instaName"> logansworld<b>1 h</b>
+          <br>
+          <div class="tweetLocation"> <span class="th th-location-2"></span> los angeles, california</div>
+        </div>
+	</div>
+	<div class="instaIndvImg">
+		<img src="https://i.imgur.com/8iT8Ibz.png">
+	</div>
+	<div class="instaBottomBar">
+		<b class="captionName">logansworld</b> the best feeling.<br>
+		<b class="instaComments">view all 26.33k comments</b>
+	</div>
+</div>
+        <div class="isntaPostIndv">
+	<div class="instaTop">
+          <img src="https://i.imgur.com/O6OEKr0.png" class="instaIcon">
+        <div class="instaName"> logansworld<b>1 h</b>
+          <br>
+          <div class="tweetLocation"> <span class="th th-location-2"></span> los angeles, california</div>
+        </div>
+	</div>
+	<div class="instaIndvImg">
+		<img src="https://i.imgur.com/s4FnGFc.png">
+	</div>
+	<div class="instaBottomBar">
+		<b class="captionName">logansworld</b> pull day.<br>
+		<b class="instaComments">view all 26.33k comments</b>
+	</div>
+</div>
+        <div class="isntaPostIndv">
+	<div class="instaTop">
+          <img src="https://i.imgur.com/O6OEKr0.png" class="instaIcon">
+        <div class="instaName"> logansworld<b>1 h</b>
+          <br>
+          <div class="tweetLocation"> <span class="th th-location-2"></span> los angeles, california</div>
+        </div>
+	</div>
+	<div class="instaIndvImg">
+		<img src="https://i.imgur.com/uXB9wh4.png">
+	</div>
+	<div class="instaBottomBar">
+		<b class="captionName">logansworld</b> you're mine.<br>
+		<b class="instaComments">view all 26.33k comments</b>
+	</div>
+</div>
+        <div class="isntaPostIndv">
+	<div class="instaTop">
+          <img src="https://i.imgur.com/O6OEKr0.png" class="instaIcon">
+        <div class="instaName"> logansworld<b>1 h</b>
+          <br>
+          <div class="tweetLocation"> <span class="th th-location-2"></span> los angeles, california</div>
+        </div>
+	</div>
+	<div class="instaIndvImg">
+		<img src="https://i.imgur.com/PRjgEl3.png">
+	</div>
+	<div class="instaBottomBar">
+		<b class="captionName">logansworld</b> doggin'.<br>
+		<b class="instaComments">view all 26.33k comments</b>
+	</div>
+</div>
+          </div>
+        </div>
+        <div class="showLove">
+          <div class="insideRightScroll">
+            <h1 class="insideRightTitle">
+              the love interest
+            </h1>
+            <b>status:</b> In love.<br>
+<b>since:</b> 07.30.24<br>
+<b>to whom:</b> <a href="/1952791">Sawyer Reid</a><br>
+<b>Comment:</b> -
+   
+          </div>
+         </div>
+      </div>
+      <div class="bottomConnections">
+        <img src="https://i.imgur.com/cIKNT2D.png" class="connectionImage">
+        <h2 class="connectionsTitle">
+          Men always tell their troubles to a barmaid.
+          <span>hover over for connections</span>
+        </h2>
+        <div class="actualConnectionsHolder">
+          <b>Connection Name</b> / / <i>Connection Title</i> / /    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Posuere ac ut consequat semper. Tincidunt ornare massa eget egestas purus. Viverra nam libero justo laoreet sit. Adipiscing vitae proin sagittis nisl rhoncus. Penatibus et magnis dis parturient montes. Tortor consequat id porta nibh venenatis cras. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Posuere sollicitudin aliquam ultrices sagittis orci. Faucibus in ornare quam viverra orci sagittis eu volutpat.
+<br><br>
+<b>Connection Name</b> / / <i>Connection Title</i> / /    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Posuere ac ut consequat semper. Tincidunt ornare massa eget egestas purus. Viverra nam libero justo laoreet sit. Adipiscing vitae proin sagittis nisl rhoncus. Penatibus et magnis dis parturient montes. Tortor consequat id porta nibh venenatis cras. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Posuere sollicitudin aliquam ultrices sagittis orci. Faucibus in ornare quam viverra orci sagittis eu volutpat.
+<br><br>
+<b>Connection Name</b> / / <i>Connection Title</i> / /    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Posuere ac ut consequat semper. Tincidunt ornare massa eget egestas purus. Viverra nam libero justo laoreet sit. Adipiscing vitae proin sagittis nisl rhoncus. Penatibus et magnis dis parturient montes. Tortor consequat id porta nibh venenatis cras. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Posuere sollicitudin aliquam ultrices sagittis orci. Faucibus in ornare quam viverra orci sagittis eu volutpat.
+<br><br>
+<b>Connection Name</b> / / <i>Connection Title</i> / /    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Posuere ac ut consequat semper. Tincidunt ornare massa eget egestas purus. Viverra nam libero justo laoreet sit. Adipiscing vitae proin sagittis nisl rhoncus. Penatibus et magnis dis parturient montes. Tortor consequat id porta nibh venenatis cras. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Posuere sollicitudin aliquam ultrices sagittis orci. Faucibus in ornare quam viverra orci sagittis eu volutpat.
+<br><br>
+<b>Connection Name</b> / / <i>Connection Title</i> / /    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Posuere ac ut consequat semper. Tincidunt ornare massa eget egestas purus. Viverra nam libero justo laoreet sit. Adipiscing vitae proin sagittis nisl rhoncus. Penatibus et magnis dis parturient montes. Tortor consequat id porta nibh venenatis cras. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Posuere sollicitudin aliquam ultrices sagittis orci. Faucibus in ornare quam viverra orci sagittis eu volutpat.
+<br><br>
+<b>Connection Name</b> / / <i>Connection Title</i> / /    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Posuere ac ut consequat semper. Tincidunt ornare massa eget egestas purus. Viverra nam libero justo laoreet sit. Adipiscing vitae proin sagittis nisl rhoncus. Penatibus et magnis dis parturient montes. Tortor consequat id porta nibh venenatis cras. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Posuere sollicitudin aliquam ultrices sagittis orci. Faucibus in ornare quam viverra orci sagittis eu volutpat.
+<br><br>
+<b>Connection Name</b> / / <i>Connection Title</i> / /    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Posuere ac ut consequat semper. Tincidunt ornare massa eget egestas purus. Viverra nam libero justo laoreet sit. Adipiscing vitae proin sagittis nisl rhoncus. Penatibus et magnis dis parturient montes. Tortor consequat id porta nibh venenatis cras. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Posuere sollicitudin aliquam ultrices sagittis orci. Faucibus in ornare quam viverra orci sagittis eu volutpat.
+<br><br>
+<b>Connection Name</b> / / <i>Connection Title</i> / /    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Posuere ac ut consequat semper. Tincidunt ornare massa eget egestas purus. Viverra nam libero justo laoreet sit. Adipiscing vitae proin sagittis nisl rhoncus. Penatibus et magnis dis parturient montes. Tortor consequat id porta nibh venenatis cras. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Posuere sollicitudin aliquam ultrices sagittis orci. Faucibus in ornare quam viverra orci sagittis eu volutpat.
+<br><br>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
